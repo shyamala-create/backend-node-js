@@ -7,7 +7,7 @@ const app = express();
 // configure the routes for the application
 app.get('/', (req, res) => {
   res.json({
-    message: "Welcome to express application"
+    message: "Welcome to express application using nodemon"
   })
 })
 
