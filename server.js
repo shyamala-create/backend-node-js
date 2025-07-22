@@ -4,8 +4,14 @@ const express = require('express');
 // create an instance or application of express
 const app = express();
 
+app.use(express.json()); // middleware to parse json bodies.
+
+// after hitting we receives the request
+
+
 // configure the routes for the application
 app.get('/', (req, res) => {
+  console.log(req.body)
   res.json({
     message: "Welcome to express application using nodemon"
   })
