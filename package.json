@@ -1,0 +1,31 @@
+{
+  "name": "backend-node-js",
+  "version": "1.0.0",
+  "description": "Backend application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyamala-create/backend-node-js.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "mongodb",
+    "dotenv",
+    "jsonwebtoken",
+    "mongoose"
+  ],
+  "author": "Shyamala M S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shyamala-create/backend-node-js/issues"
+  },
+  "homepage": "https://github.com/shyamala-create/backend-node-js#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
