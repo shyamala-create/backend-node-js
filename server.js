@@ -11,6 +11,36 @@ app.get('/', (req, res) => {
   })
 })
 
+app.get('/users', (req, res) => {
+  res.json({
+    message: "User found"
+  })
+});
+
+app.post('/users', (req, res) => {
+  res.json({
+    message: "User added"
+  })
+});
+
+app.put('/users', (req, res) => {
+  res.json({
+    message: "User updated"
+  })
+});
+
+app.patch('/users', (req, res) => {
+  res.json({
+    message: "User updated patch!!"
+  })
+});
+
+app.delete('/users', (req, res) => {
+  res.json({
+    message: "User deleted!!"
+  })
+});
+
 // run the application
 app.listen(3000, () => {
   console.log("server is running on http://localhost:3000")
