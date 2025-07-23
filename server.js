@@ -1,71 +1,22 @@
-// importing express module
-const express = require('express');
-const logger = require('./utils/logger');
+const { default: mongoose } = require("mongoose");
+const app = require("./app");
+const {MONGODB_URI, PORT} = require("./utils/config")
 
-// create an instance or application of express
-const app = express();
-
-// middleware to parse json bodies.
-app.use(express.json()); // 1st hitting we receives the request
-
-// import the logger middleware
-app.use(logger);
-
-// configure the routes for the application
-app.get('/', (req, res) => {
-  console.log(req.body)
-  res.json({
-    message: "Welcome to express application using nodemon"
+console.log("connecting to the database....");
+//connect to database
+mongoose
+  .connect(MONGODB_URI)
+  .then(() => {
+    console.log("Connected to database");
+    console.log("Starting the server");
+    // run the application
+    app.listen(PORT, () => {
+      console.log("server is running on http://localhost:3000");
+    });
   })
-})
-
-app.get('/users', (req, res) => {
-  res.json({
-    message: "User found"
-  })
-});
-
-app.post('/users', (req, res) => {
-  res.json({
-    message: "User added"
-  })
-});
-
-app.put('/users', (req, res) => {
-  res.json({
-    message: "User updated"
-  })
-});
-
-app.patch('/users', (req, res) => {
-  res.json({
-    message: "User updated patch!!"
-  })
-});
-
-app.delete('/users', (req, res) => {
-  res.json({
-    message: "User deleted!!"
-  })
-});
-
-// run the application
-app.listen(3000, () => {
-  console.log("server is running on http://localhost:3000")
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .catch((err) => {
+    console.log("Error connecting database", err.message);
+  });
 
 // Normal way of creating server using http before express framework, Just for reference.
 // // import the http module

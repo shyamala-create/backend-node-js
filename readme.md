@@ -48,3 +48,11 @@ node js This will make it difficult to manage routes, middleware, and other func
 ## to over come the disadvantage in node  we use express js 
 Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications.
 It simplifies the process of building web applications by providing a set of tools and utilities that make it easier to handle routing, middleware, and other common tasks.
+
+## MVC Architecture
+- MVC is a software application 
+
+## api versioning
+- Api versioning is the practice of managing to an API over time. 
+- it allows the developers to maintain the application without breaking existing clients.
+- url versioning: include the version number in the URL (eg., `/api/v1/resource`).
