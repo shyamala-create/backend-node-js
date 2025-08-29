@@ -56,3 +56,7 @@ It simplifies the process of building web applications by providing a set of too
 - Api versioning is the practice of managing to an API over time. 
 - it allows the developers to maintain the application without breaking existing clients.
 - url versioning: include the version number in the URL (eg., `/api/v1/resource`).
+
+## 
+- URL - uniform resource locator
+- URI - uniform resource identifier
